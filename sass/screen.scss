@@ -1,0 +1,92 @@
+@import "compass/reset";
+@import "colors", "header";
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-size: cover;
+  background: #464646 url("../assets/hero-min.jpg") no-repeat fixed center center;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+main.hero {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  h1 {
+    color: white;
+    font-size: 3.5rem;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+main {
+  article {
+    background-color: rgba(white, 1);
+    h1 {
+      padding: 1rem;
+      background-color: $primary;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      font-size: 2rem;
+    }
+    section {
+      padding: 1rem;
+      font-size: 1.12rem;
+      line-height: 1.35;
+      border-bottom: 1px solid gray;
+      h2 {
+        color: $primary;
+        border-left: 0.25rem solid $secondary;
+        font-size: 1.5rem;
+        padding: 0.65rem 0.25rem;
+      }
+      p {
+        padding: 0.5rem;
+        text-align: justify;
+      }
+      ul {
+        list-style: disc;
+        margin: 0.5rem 2rem;
+        li {
+          margin: 0.5rem 0;
+          ul {
+            list-style: circle;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+    }
+  }
+}
+
+main.projects {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  div#map {
+    width: 100%;
+    flex: 1 0 auto;
+    height: 100vh;
+  }
+}
