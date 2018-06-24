@@ -55,6 +55,12 @@ main {
         font-size: 1.5rem;
         padding: 0.65rem 0.25rem;
       }
+      h3 {
+        color: $primary;
+        border-left: 0.25rem solid $secondary;
+        font-size: 1.15rem;
+        padding: 0.25rem 0 0.25rem 0.65rem;
+      }
       p {
         padding: 0.5rem;
         text-align: justify;
@@ -75,6 +81,9 @@ main {
         -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+      b {
+        font-weight: 600;
       }
     }
   }
