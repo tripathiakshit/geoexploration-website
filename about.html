@@ -2,17 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
-    <link href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css"/>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <link href="./sass/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/print.css" media="print" rel="stylesheet" type="text/css"/>
+    <link href="./sass/fontawesome.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/fa-light.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <!--[if IE]>
-    <link href="./stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <![endif]-->
     <title>About Us - GeoExploration LLC</title>
 </head>
 <body>
+<span id="top"></span>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 <header>
-    <img src="assets/Logo.jpg" alt="Site Logo">
-    <nav>
+    <div class="nav-mobile-header">
+        <a aria-controls="main-menu"
+           aria-expanded="false"
+           aria-label="Open main menu"
+           class="menu-toggle"
+           href="#main-menu"
+           id="main-menu-toggle"
+           role="button">
+            <span class="sr-only">Open main menu</span>
+            <span aria-hidden="true" class="fal fa-bars"></span>
+        </a>
+        <img alt="Site Logo" src="assets/Logo.jpg">
+    </div>
+    <nav aria-expanded="false"
+         aria-label="Main menu"
+         class="main-menu"
+         id="main-menu"
+         role="navigation">
+        <a aria-controls="main-menu"
+           aria-expanded="false"
+           aria-label="Close main menu"
+           class="menu-close"
+           href="#main-menu-toggle"
+           id="main-menu-close"
+           role="button">
+            <span class="sr-only">Close main menu</span>
+            <span aria-hidden="true" class="fal fa-times"></span>
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -23,7 +58,89 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
+    <a aria-hidden="true"
+       class="backdrop"
+       hidden
+       href="#main-menu-toggle"
+       tabindex="-1"></a>
 </header>
-
+<main>
+    <article>
+        <h1>About Us</h1>
+        <section>
+            <h2>Dr. Amit Tripathi</h2>
+            <img alt="Dr. Amit Tripathi" src="assets/people/amit_tripathi.jpg">
+            <h3>Qualifications</h3>
+            <ul>
+                <li>Ph.D., Geology, BHU, India</li>
+                <li>M.Sc., Geology, (with specialization in structural geology), BHU, India</li>
+            </ul>
+            <h3>Summary</h3>
+            <ul>
+                <li>
+                    Dr. Amit has multidisciplinary experience in mineral, nuclear energy exploration, mine planning,
+                    processing and geo-statistical approach for total quality control in variety of mineral viz. high
+                    valued minerals, base metals and industrial minerals which has made him recognized for his services
+                    in mining sector as Member of "The Australasian Institute of Mines and Metals" (AusIMM).
+                </li>
+                <li>
+                    Dr. Amit's experience spans twenty-six years in research as well as exploration and mining
+                    industries in several countries in five continents. He has used his expertise in mineral exploration
+                    at USA, Australia, Canada, Colombia, Ecuador, Guyana, India, Madagascar, Mongolia, Nicaragua, Niger,
+                    Panama, Senegal, South Africa, Tanzania tic
+                </li>
+                <li>
+                    Dr. Amit Tripathi is a Doctorate in Structural Geology, started GeoExploration LLC which provide end
+                    to end services in the fields of Mining, Mineral Exploration and Mineral Processing.
+                </li>
+                <li>
+                    Served National Mineral Development Corporation (NDMC), one of the top ten public sector companies
+                    of Govt. of India, for seven years in various capacities. He has been project manager on NMDC
+                    project in Tanzania and Lesotho and lead the team in Africa to a successful hard rock exploration
+                    project. During the stint at NMDC he also completed exploration of diamond bearing kimberlites in
+                    South India.
+                </li>
+                <li>
+                    He has served in senior management and advisory positions and prepared NI43-101 and JORC compliant
+                    reports for several listed companies like Goviex Uranium Ltd. (Canada), Sunward Resources Ltd.
+                    (Canada), Condoto Platinum Ltd (Australia), Future Vantage (Singapore) Pvt. Ltd., Blue Stream
+                    Enterprises Ltd. (BV1) (Subs of Mongolia Energy Corp of Hong Kong).
+                </li>
+                <li>
+                    Worked on structural correlations of mineralization.
+                </li>
+                <li>
+                    Developed mathematical model for assessment of gold grades in coarse gold deposits and high nugget
+                    effect geological environment.
+                </li>
+                <li>
+                    Worked extensively in geological mapping and interpretation of structures and sedimentary features
+                    in India and abroad.
+                </li>
+                <li>
+                    Well experienced in software development for geological applications.
+                </li>
+                <li>
+                    He has authored one book, published about twenty-two scientific research papers in national and
+                    international journals.
+                </li>
+                <li>
+                    Based on the results obtained during research work, M.Sc. and Ph. D. degrees have been awarded and
+                    several research articles have been published and submitted for publication in national and
+                    international journals. In addition, the results have been presented at several seminars/symposia.
+                    The research work is internationally recognized, read, referred and used in conceiving, planning and
+                    executing exploration works for gold, diamond and iron ore.
+                </li>
+                <li>
+                    Several international analysts have reviewed the work and wrote articles about Dr Amit. Some major
+                    ones being Ticker Trax (Thom Calandra) and 321Gold (Bob Moriarty).
+                </li>
+                <li>
+                    Awarded the prestigious Dr K S. Krishnan Fellowship by Dept. of Atomic Energy in 1992.
+                </li>
+            </ul>
+        </section>
+    </article>
+</main>
 </body>
 </html>

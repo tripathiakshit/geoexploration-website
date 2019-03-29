@@ -2,17 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
-    <link href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css"/>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <link href="./sass/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/print.css" media="print" rel="stylesheet" type="text/css"/>
+    <link href="./sass/fontawesome.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/fa-light.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <!--[if IE]>
-    <link href="./stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <![endif]-->
     <title>Gallery - GeoExploration LLC</title>
 </head>
 <body>
+<span id="top"></span>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 <header>
-    <img src="assets/Logo.jpg" alt="Site Logo">
-    <nav>
+    <div class="nav-mobile-header">
+        <a aria-controls="main-menu"
+           aria-expanded="false"
+           aria-label="Open main menu"
+           class="menu-toggle"
+           href="#main-menu"
+           id="main-menu-toggle"
+           role="button">
+            <span class="sr-only">Open main menu</span>
+            <span aria-hidden="true" class="fal fa-bars"></span>
+        </a>
+        <img alt="Site Logo" src="assets/Logo.jpg">
+    </div>
+    <nav aria-expanded="false"
+         aria-label="Main menu"
+         class="main-menu"
+         id="main-menu"
+         role="navigation">
+        <a aria-controls="main-menu"
+           aria-expanded="false"
+           aria-label="Close main menu"
+           class="menu-close"
+           href="#main-menu-toggle"
+           id="main-menu-close"
+           role="button">
+            <span class="sr-only">Close main menu</span>
+            <span aria-hidden="true" class="fal fa-times"></span>
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -23,7 +58,76 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
+    <a aria-hidden="true"
+       class="backdrop"
+       hidden
+       href="#main-menu-toggle"
+       tabindex="-1"></a>
 </header>
+<main>
+    <article>
+        <h1>Gallery</h1>
+        <section class="gallery" id="gallery">
+            <img alt="" src="assets/gallery/Arlit-080808-115.jpg">
+            <img alt="" src="assets/gallery/Arlit-080808-168.jpg">
+            <img alt="" src="assets/gallery/Arlit-more-pictures-229.jpg">
+            <img alt="" src="assets/gallery/Arlit-more-pictures-273.jpg">
+            <img alt="" src="assets/gallery/CIMG0281.JPG">
+            <img alt="" src="assets/gallery/CIMG0742.JPG">
+            <img alt="" src="assets/gallery/DSC01217.JPG">
+            <img alt="" src="assets/gallery/DSC02393.JPG">
+            <img alt="" src="assets/gallery/DSC02399.JPG">
+            <img alt="" src="assets/gallery/DSCN0138.JPG">
+            <img alt="" src="assets/gallery/IMG-20130912-00043.jpg">
+            <img alt="" src="assets/gallery/IMG_0073.JPG">
+            <img alt="" src="assets/gallery/IMG_0091.JPG">
+            <img alt="" src="assets/gallery/IMG_0230.JPG">
+            <img alt="" src="assets/gallery/IMG_0246.JPG">
+            <img alt="" src="assets/gallery/IMG_0247.JPG">
+            <img alt="" src="assets/gallery/IMG_0254.JPG">
+            <img alt="" src="assets/gallery/IMG_0266.JPG">
+            <img alt="" src="assets/gallery/IMG_0523.JPG">
+            <img alt="" src="assets/gallery/IMG_3389.JPG">
+            <img alt="" src="assets/gallery/IMG_4503.JPG">
+            <img alt="" src="assets/gallery/IMG_4527.JPG">
+            <img alt="" src="assets/gallery/IMGP1375.JPG">
+            <img alt="" src="assets/gallery/PB120109.JPG">
+            <img alt="" src="assets/gallery/PB120110.JPG">
+            <img alt="" src="assets/gallery/Platform3-22th_July-2008-(122).jpg">
+            <img alt="" src="assets/gallery/SAM_0017.JPG">
+            <img alt="" src="assets/gallery/SAM_0023.JPG">
+            <img alt="" src="assets/gallery/SAM_0179.JPG">
+            <img alt="" src="assets/gallery/SAM_0185.JPG">
+            <img alt="" src="assets/gallery/SAM_0896.JPG">
+            <img alt="" src="assets/gallery/SANY0101.JPG">
+            <img alt="" src="assets/gallery/SANY0212.JPG">
+            <img alt="" src="assets/gallery/SANY0286.JPG">
+            <img alt="" src="assets/gallery/SANY0320.JPG">
+            <img alt="" src="assets/gallery/SANY0324.JPG">
+            <img alt="" src="assets/gallery/SANY0384.JPG">
+            <img alt="" src="assets/gallery/SANY0394.JPG">
+            <img alt="" src="assets/gallery/SANY0399.JPG">
+            <img alt="" src="assets/gallery/SANY0411.JPG">
+            <img alt="" src="assets/gallery/SANY0415.JPG">
+            <img alt="" src="assets/gallery/SANY0422.JPG">
+            <img alt="" src="assets/gallery/SANY0435.JPG">
+            <img alt="" src="assets/gallery/SANY0484.JPG">
+            <img alt="" src="assets/gallery/SANY0536.JPG">
+            <img alt="" src="assets/gallery/Slickensides.JPG">
+            <img alt="" src="assets/gallery/starofSierraLeone.JPG">
+            <img alt="" src="assets/gallery/Streached-clast-in-marble-in-browns-creek-mine.jpg">
+        </section>
+    </article>
+</main>
+<!--<script>
+    const gallery = document.getElementById("gallery");
+    const images = gallery.getElementsByTagName("img");
+    console.log(images);
+    for(let i = 0; i < images.length; i++) {
+        images[i].addEventListener("onclick", function () {
 
+        });
+    }
+</script>-->
 </body>
 </html>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
-    <link href="./stylesheets/fontawesome/css/fontawesome.css" rel="stylesheet"/>
-    <link href="./stylesheets/fontawesome/css/all.css" rel="stylesheet"/>
-    <link href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css"/>
+    <link href="./sass/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/print.css" media="print" rel="stylesheet" type="text/css"/>
+    <link href="./sass/fontawesome.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/fa-light.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <!--[if IE]>
-    <link href="./stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <![endif]-->
     <title>Technologies - GeoExploration LLC</title>
 </head>
@@ -29,7 +29,7 @@
            aria-controls="main-menu"
            aria-label="Open main menu">
             <span class="sr-only">Open main menu</span>
-            <span class="fa fa-bars" aria-hidden="true"></span>
+            <span aria-hidden="true" class="fal fa-bars"></span>
         </a>
         <img src="assets/Logo.jpg" alt="Site Logo">
     </div>
@@ -46,7 +46,7 @@
            aria-controls="main-menu"
            aria-label="Close main menu">
             <span class="sr-only">Close main menu</span>
-            <span class="fa fa-close" aria-hidden="true"></span>
+            <span aria-hidden="true" class="fal fa-times"></span>
         </a>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -68,9 +68,13 @@
     <article>
         <h1>Technologies</h1>
         <section>
-            <!-- TODO: Add presentation download link-->
             <h2>Geology-Geophysics data integration</h2>
             <h3><b><u>CAGE-IN:</u></b><br>Constrained Area Gridding for Enhanced Interpretation</h3>
+            <a download="assets/" href="assets/downloads/20170214-CAGEIN_GeoExploration_Presentation.pdf">
+                <button class="download" onclick=""><i class="fal fa-download">
+                </i> Download CAGE-IN Presentation
+                </button>
+            </a>
             <ul>
                 <li>CAGE-IN technology enhances existing geophysical data</li>
                 <li>Helps identify additional targets even in well explored areas</li>
@@ -103,8 +107,10 @@
                     statistical models of structure, ore chemistry and pathfinders
                 </li>
             </ul>
-            <img src="assets/gold-proxy-index_pic1.png" alt="Gold Proxy Index">
-            <img src="assets/gold-proxy-index_pic2.png" alt="Gold Proxy Index">
+            <div class="imageContainer">
+                <img alt="Gold Proxy Index" src="assets/gold-proxy-index_pic1.png">
+                <img alt="Gold Proxy Index" src="assets/gold-proxy-index_pic2.png">
+            </div>
         </section>
         <section>
             <h2>Drill database corrections</h2>
@@ -119,12 +125,18 @@
                 <li>Comparing multiple entry of text data</li>
                 <li>deviations are flagged for supervisory verification</li>
             </ul>
-            <img src="assets/drill-database-corrections_pic1-min.png" alt="Drill database corrections sample">
-            <img src="assets/drill-database-corrections_pic2.png" alt="QA/QC tool">
+            <div class="imageContainer">
+                <img alt="Drill database corrections sample" src="assets/drill-database-corrections_pic1-min.png">
+                <img alt="QA/QC tool" src="assets/drill-database-corrections_pic2.png">
+            </div>
         </section>
         <section>
             <h2>Spectral Classification</h2>
-            <!-- TODO: Add presentation download link -->
+            <a download="assets/" href="assets/downloads/20170214-CAGEIN_GeoExploration_Presentation.pdf">
+                <button class="download" onclick=""><i class="fal fa-download">
+                </i> Download Spectral Classification Presentation
+                </button>
+            </a>
             <ul>
                 <li>Proprietary image classification technology uses spectral signature to identify mineral prospects
                     over very large areas.

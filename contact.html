@@ -1,18 +1,49 @@
+<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
-    <link href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css"/>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <link href="./sass/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/print.css" media="print" rel="stylesheet" type="text/css"/>
+    <link href="./sass/fontawesome.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/fa-light.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <!--[if IE]>
-    <link href="./stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="./sass/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <![endif]-->
     <title>Contact Us - GeoExploration LLC</title>
 </head>
 <body>
 <header>
-    <img src="assets/Logo.jpg" alt="Site Logo">
-    <nav>
+    <div class="nav-mobile-header">
+        <a aria-controls="main-menu"
+           aria-expanded="false"
+           aria-label="Open main menu"
+           class="menu-toggle"
+           href="#main-menu"
+           id="main-menu-toggle"
+           role="button">
+            <span class="sr-only">Open main menu</span>
+            <span aria-hidden="true" class="fal fa-bars"></span>
+        </a>
+        <img alt="Site Logo" src="assets/Logo.jpg">
+    </div>
+    <nav aria-expanded="false"
+         aria-label="Main menu"
+         class="main-menu"
+         id="main-menu"
+         role="navigation">
+        <a aria-controls="main-menu"
+           aria-expanded="false"
+           aria-label="Close main menu"
+           class="menu-close"
+           href="#main-menu-toggle"
+           id="main-menu-close"
+           role="button">
+            <span class="sr-only">Close main menu</span>
+            <span aria-hidden="true" class="fal fa-times"></span>
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -23,7 +54,34 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
+    <a aria-hidden="true"
+       class="backdrop"
+       hidden
+       href="#main-menu-toggle"
+       tabindex="-1"></a>
 </header>
-
+<main>
+    <article>
+        <h1>Contact Us</h1>
+        <section>
+            <form action="mailto:ceo@geoexplorationllc.com?subject=Query from website" enctype="text/plain"
+                  method="post">
+                <label>
+                    Your name:
+                    <input maxlength="100" name="name" required type="text">
+                </label>
+                <label>
+                    Email Address:
+                    <input maxlength="100" name="email" placeholder="yourname@email.com" required type="email" value="">
+                </label>
+                <label>
+                    Comments:
+                    <textarea cols="50" maxlength="1500" name="comments" required rows="10"></textarea>
+                </label>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </article>
+</main>
 </body>
 </html>
