@@ -22,6 +22,7 @@ main.hero {
   justify-content: center;
   align-items: center;
   height: 80vh;
+
   h1 {
     color: white;
     font-size: 3rem;
@@ -35,6 +36,7 @@ main.hero {
 main {
   article {
     background-color: rgba(white, 1);
+
     h1 {
       padding: 1rem;
       background-color: $primary;
@@ -44,31 +46,38 @@ main {
       font-size: 2rem;
       margin: 0;
     }
+
     section {
       padding: 1rem;
       font-size: 1.12rem;
       line-height: 1.35;
+
       h2 {
         color: $primary;
         border-left: 0.25rem solid $secondary;
         font-size: 1.5rem;
         padding: 0.65rem 0.5rem;
       }
+
       h3 {
         color: $primary;
         border-left: 0.25rem solid $secondary;
         font-size: 1.15rem;
         padding: 0.25rem 0 0.25rem 0.65rem;
       }
+
       p {
         padding: 0.5rem;
         text-align: justify;
       }
+
       ul {
         list-style: square outside;
         margin: 0.5rem 0;
+
         li {
           margin: 0.5rem 0;
+
           ul {
             list-style: circle;
           }
@@ -91,6 +100,7 @@ main {
           margin: 1rem 0 0 0;
         }
       }
+
       b {
         font-weight: 600;
       }
@@ -116,6 +126,7 @@ main.projects {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
   div#map {
     width: 100%;
     flex: 1 0 auto;
