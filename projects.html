@@ -67,32 +67,24 @@
 <main class="projects">
     <div id="map"></div>
 </main>
+<script src="scripts/locationdata.js"></script>
 <script>
     let map;
 
     function initMap() {
-        let locations = [
-            ['Title 1', '<p><b>Site 1</b> is where we <i>first</i> excavated. We found kangaroo fossils. <a href="https://en.wikipedia.org/wiki/Kangaroo">Know more about Kangaroos here </a>(last visited June 22, 2009).</p>', -33.890542, 151.274856, 4],
-            ['Title 2', 'Description 2', -33.923036, 151.259052, 5],
-            ['Title 3', 'Description 3', -34.028249, 151.157507, 3],
-            ['Title 4', 'Description 4', -33.80010128657071, 151.28747820854187, 2],
-            ['Title 5', 'Description 5', -33.950198, 151.259302, 1]
-        ];
+        let locations = locationList;
 
         // TODO: Add styles to popup bubble (override compass reset)
         function getContentString(title, description) {
-            return '<div id="content">' +
-                '<div id="siteNotice">' +
-                '</div>' +
-                '<h1 id="firstHeading" class="firstHeading">' + title + '</h1>' +
-                '<div id="bodyContent">' + description +
-                '</div>' +
-                '</div>';
+            return `<div id="content">
+                <div id="siteNotice"></div>
+                <h1 id="firstHeading" class="firstHeading">${title}</h1>
+                <div id="bodyContent">${description}</div>
+                </div>`;
         }
 
-
         map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 1,
+            zoom: 3,
             center: new google.maps.LatLng(0, 0),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
@@ -123,6 +115,5 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXoEnMRYvIhsCNVE-emfcvee1V6JBRchg&callback=initMap"
         type="text/javascript"></script>
-
 </body>
 </html>
