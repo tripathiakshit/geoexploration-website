@@ -1,5 +1,25 @@
 @import "colors";
 /* Screen reader only */
+header {
+  background-color: white;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  .nav-mobile-header {
+    display: flex;
+    padding: 1em 0.5em;
+    align-items: center;
+
+    img {
+      background-color: $primary;
+      width: 80%;
+      height: auto;
+      flex: 1 1 auto;
+    }
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -34,7 +54,7 @@
   left: -200px;
   top: 0;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: visible;
   transition: left 0.3s ease,
   box-shadow 0.3s ease;
@@ -81,39 +101,6 @@
   }
 }
 
-//nav#nav-drawer {
-//  &:target {
-//    width: 80%;
-//  }
-//  width: 0;
-//  overflow: hidden;
-//  position: fixed;
-//  top: auto;
-//  left: 0;
-//  height: 100%;
-//  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-//  -moz-box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-//  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-//  background-color: $primary;
-//  -webkit-transition: all 0.5s ease;
-//  -moz-transition: all 0.5s ease;
-//  -ms-transition: all 0.5s ease;
-//  -o-transition: all 0.5s ease;
-//  transition: all 0.5s ease;
-//  ul {
-//    list-style: none;
-//    li {
-//      background-color: $primary;
-//      padding: 1rem 0;
-//      border-bottom: 1px solid lighten($primary, 20%);
-//      a {
-//        text-decoration: none;
-//        color: $secondary;
-//        margin: 0.5rem;
-//      }
-//    }
-//  }
-//}
 .main-menu:target,
 .main-menu[aria-expanded="true"] {
   left: 0;
@@ -134,10 +121,6 @@
   z-index: 1000;
 }
 
-/*
- We could us `.main-menu:target:after`, but
- it wouldn't be clickable.
-*/
 .main-menu:target + .backdrop,
 .main-menu[aria-expanded="true"] + .backdrop {
   position: absolute;
@@ -178,6 +161,7 @@
     left: auto;
     top: auto;
     height: auto;
+    overflow: hidden;
   }
 
   .main-menu ul {
@@ -203,7 +187,7 @@
   }
 
   .main-menu a {
-    color: #06c;
+    color: $primary;
     border: 0 !important; /* Remove borders from off-canvas styling */
   }
 
@@ -212,23 +196,48 @@
     background: none; /* Remove background from off-canvas styling */
     color: white;
   }
+
+  header {
+    .nav-mobile-header {
+      img {
+        width: 80%;
+        margin: 0 auto;
+        flex: unset;
+      }
+    }
+  }
 }
 
-header {
-  background-color: white;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+@media screen and (min-width: 1024px) {
+  header {
+    .nav-mobile-header img {
+      width: 50%;
+    }
 
-  .nav-mobile-header {
-    display: flex;
-    padding: 1em 0.5em;
-    align-items: center;
-
-    img {
+    nav {
       background-color: $primary;
-      width: 80%;
-      height: auto;
+    }
+
+    .main-menu ul {
+      box-shadow: none;
+      max-width: 60%;
+      margin: 0 auto;
+
+      li {
+        flex: 1 1 auto;
+
+        a {
+          text-align: center;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:hover {
+          background-color: lighten($primary, 10%);
+        }
+      }
     }
   }
 }
