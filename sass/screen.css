@@ -5,13 +5,11 @@ header {
     -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-
 header .nav-mobile-header {
     display: flex;
     padding: 1em 0.5em;
     align-items: center;
 }
-
 header .nav-mobile-header img {
     background-color: #0c498e;
     width: 80%;
@@ -191,7 +189,6 @@ header .nav-mobile-header img {
         flex: unset;
     }
 }
-
 @media screen and (min-width: 1024px) {
     header .nav-mobile-header img {
         width: 50%;
@@ -282,14 +279,12 @@ main article section ul li {
 main article section ul li ul {
     list-style: circle;
 }
-
 main article section.gallery {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
-
 main article section.gallery img {
     width: 100%;
     height: auto;
@@ -313,7 +308,6 @@ main article section button.download {
 main article section button.download i {
     margin-right: 1rem;
 }
-
 main article .imageContainer {
     padding: 1rem;
     display: flex;
@@ -321,7 +315,6 @@ main article .imageContainer {
     justify-content: center;
     align-items: center;
 }
-
 main article .imageContainer img {
     width: 100%;
     height: auto;
@@ -330,12 +323,10 @@ main article .imageContainer img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.23);
     margin: 1rem 0 0 0;
 }
-
 main article textarea, main article label {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 1rem;
 }
-
 main #scrollToTopButton {
     color: white;
     position: fixed;
@@ -360,7 +351,6 @@ main.hero {
     align-items: center;
     height: 80vh;
 }
-
 main.hero h1 {
     color: white;
     font-size: 3rem;
@@ -440,6 +430,22 @@ main.projects div#map {
 
     main article .imageContainer img {
         width: 35%;
+    }
+}
+
+@supports (display: grid) {
+    main article section.gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem;
+        margin: 0 auto;
+        width: 90vw;
+    }
+
+    main article section.gallery img {
+        width: 100%;
+        height: auto;
+        align-self: start;
     }
 }
 

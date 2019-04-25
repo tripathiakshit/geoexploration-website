@@ -242,3 +242,19 @@ main.projects {
     }
   }
 }
+
+@supports (display: grid) {
+  main article section.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    margin: 0 auto;
+    width: 90vw;
+
+    img {
+      width: 100%;
+      height: auto;
+      align-self: start;
+    }
+  }
+}
