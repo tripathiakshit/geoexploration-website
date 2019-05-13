@@ -83,7 +83,6 @@ let assets = [
 ];
 
 self.addEventListener('install', function (event) {
-    // Perform install steps
     event.waitUntil(async function () {
         const cache = await caches.open(CACHE_NAME);
         cache.addAll(assets);
@@ -92,7 +91,6 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('fetch', event => {
-    console.log(event.request.url);
     event.respondWith(async function () {
         try {
             return await fetch(event.request);
