@@ -329,19 +329,25 @@ main article textarea, main article label {
 }
 main #scrollToTopButton {
     color: white;
+    display: none;
     position: fixed;
-    margin: 1rem;
+    margin: 0.25rem;
     cursor: pointer;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    background-color: #0c498e;
-    padding: 0.5rem;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.2rem;
     bottom: 1rem;
     right: 1rem;
     -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.23);
     -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.23);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.23);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 main.hero {
@@ -432,7 +438,6 @@ main.projects div#map {
         width: 35%;
     }
 }
-
 @supports (display: grid) {
     main article section.gallery {
         display: grid;

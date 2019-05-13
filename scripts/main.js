@@ -9,3 +9,8 @@ function scrollTo(element) {
 document.getElementById("scrollToTopButton").addEventListener('click', () => {
     scrollTo(document.querySelector("header"));
 });
+
+window.onscroll = function () {
+    document.getElementById("scrollToTopButton").style.display =
+        (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+};
